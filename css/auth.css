@@ -1,0 +1,106 @@
+/* Global Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Container Layout */
+.container {
+    display: flex;
+    width: 80%;
+    max-width: 900px;
+    background: #111;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
+}
+
+/* Left Section - Intro */
+.intro {
+    width: 50%;
+    padding: 40px;
+    background-color: black;
+}
+
+.logo {
+    width: 80px;
+    margin-bottom: 20px;
+}
+
+.intro h1 {
+    font-size: 28px;
+    color: red;
+}
+
+.intro p, .intro ul {
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.cta {
+    margin-top: 10px;
+    font-weight: bold;
+    color: red;
+}
+
+/* Right Section - Authentication */
+.auth-container {
+    width: 50%;
+    position: relative;
+    overflow: hidden;
+    background-color: #222;
+}
+
+/* Slider for switching between Login & Signup */
+.slider {
+    display: flex;
+    width: 200%;
+    transition: transform 0.5s ease-in-out;
+}
+
+.card {
+    width: 50%;
+    padding: 40px;
+    text-align: center;
+    transition: opacity 0.3s ease-in-out;
+}
+
+input {
+    width: 80%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+}
+
+button {
+    width: 85%;
+    padding: 10px;
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: darkred;
+}
+
+.toggle {
+    color: red;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.toggle:hover {
+    text-decoration: underline;
+}
