@@ -1,106 +1,168 @@
-/* Global Styles */
+/* General Styles */
 body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #001E6C, #035397);
+    color: white;
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
-    background-color: black;
-    color: white;
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
     height: 100vh;
 }
 
-/* Container Layout */
+/* Container */
 .container {
     display: flex;
-    width: 80%;
+    width: 70%;
     max-width: 900px;
-    background: #111;
+    background: white;
     border-radius: 10px;
     overflow: hidden;
-    box-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
 }
 
-/* Left Section - Intro */
+/* Left Section (Intro) */
 .intro {
-    width: 50%;
+    flex: 1;
+    background: linear-gradient(135deg, #001E6C, #035397);
+    color: white;
     padding: 40px;
-    background-color: black;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
-.logo {
-    width: 80px;
-    margin-bottom: 20px;
-}
-
+/* BYTEKIT Title */
 .intro h1 {
-    font-size: 28px;
-    color: red;
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-transform: uppercase;
 }
 
-.intro p, .intro ul {
-    font-size: 14px;
+.intro span {
+    color: #FFAA4C;
+}
+
+/* Description */
+.intro p {
+    font-size: 15px;
+    margin-bottom: 15px;
     line-height: 1.5;
 }
 
-.cta {
-    margin-top: 10px;
-    font-weight: bold;
-    color: red;
+/* Features List */
+.intro ul {
+    list-style: none;
+    padding: 0;
+    text-align: left;
 }
 
-/* Right Section - Authentication */
-.auth-container {
-    width: 50%;
+.intro li {
+    font-size: 14px;
+    padding-left: 20px;
+    margin-bottom: 8px;
     position: relative;
-    overflow: hidden;
-    background-color: #222;
 }
 
-/* Slider for switching between Login & Signup */
-.slider {
-    display: flex;
-    width: 200%;
-    transition: transform 0.5s ease-in-out;
+.intro li::before {
+    content: "✔";
+    color: #FFAA4C;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
 }
 
-.card {
-    width: 50%;
+/* CTA Text */
+.cta {
+    font-weight: bold;
+    font-size: 16px;
+    color: #FFAA4C;
+    margin-top: 15px;
+}
+
+/* Right Section (Auth Container) */
+.auth-container {
+    flex: 1;
     padding: 40px;
-    text-align: center;
-    transition: opacity 0.3s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
+/* Auth Cards */
+.card {
+    width: 100%;
+    max-width: 300px;
+    text-align: center;
+    display: none;
+    color: #001E6C;
+}
+
+.card.active {
+    display: block;
+}
+
+/* Form Inputs */
 input {
-    width: 80%;
+    width: 100%;
     padding: 10px;
     margin: 10px 0;
-    border: none;
+    border: 1px solid #ddd;
     border-radius: 5px;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+input:focus {
+    border-color: #035397;
+    box-shadow: 0px 0px 5px rgba(3, 83, 151, 0.5);
     outline: none;
 }
 
+/* Buttons */
 button {
-    width: 85%;
-    padding: 10px;
-    background-color: red;
+    width: 100%;
+    padding: 12px;
+    background-color: #035397;
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s;
 }
 
 button:hover {
-    background-color: darkred;
+    background-color: #FFAA4C;
 }
 
+/* Toggle Between Login & Signup */
 .toggle {
-    color: red;
+    color: #035397;
     cursor: pointer;
     font-weight: bold;
+    transition: color 0.3s;
 }
 
 .toggle:hover {
-    text-decoration: underline;
+    color: #FFAA4C;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        width: 90%;
+    }
+
+    .intro {
+        padding: 20px;
+    }
+
+    .auth-container {
+        padding: 30px;
+    }
 }
