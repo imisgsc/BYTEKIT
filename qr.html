@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Code Generator</title>
+    <link rel="stylesheet" href="css/qr.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.qrcode/1.0/jquery.qrcode.min.js"></script>
+</head>
+<body>
+    <header>
+        <div class="logo">BYTEKIT</div>
+        <div class="user-controls">
+            <span id="user-id"></span>
+            <button class="home-btn" onclick="window.location.href='home.html';">
+                <i class="fa-solid fa-house"></i> Home
+            </button>
+            <button class="logout-btn" onclick="logout();">
+                <i class="fa-solid fa-sign-out-alt"></i> Logout
+            </button>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <h1>QR Code Generator</h1>
+            <input type="text" id="url-input" placeholder="Enter URL to generate QR Code" />
+            <button id="generate-btn">Generate QR Code</button>
+            
+            <div id="qr-code-container" class="hidden">
+                <div id="qr-code"></div>
+                <button id="copy-btn">Copy QR Code</button>
+            </div>
+            
+            <div id="result-container" class="hidden">
+                <p id="qr-text"></p>
+                <button id="reset-btn">Reset</button>
+            </div>
+        </div>
+    </main>
+
+    <script type="module" src="js/qr.js">    </script>
+</body>
+</html>

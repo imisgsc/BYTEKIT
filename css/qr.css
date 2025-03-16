@@ -1,0 +1,205 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #001E6C, #035397);
+    color: white;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+/* Header */
+header {
+    width: 90%;
+    max-width: 1000px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    position: absolute;
+    top: 10px;
+    z-index: 10;
+}
+
+/* Logo */
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #FFAA4C;
+    letter-spacing: 1.5px;
+}
+
+/* User Controls (Top Right) */
+.user-controls {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+/* User ID */
+#user-id {
+    font-size: 14px;
+    font-weight: 500;
+    color: white;
+}
+
+/* Home & Logout Buttons */
+.home-btn, .logout-btn {
+    background: #FFAA4C;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.home-btn:hover, .logout-btn:hover {
+    background: #e69538;
+}
+
+/* Main Content */
+main {
+    text-align: center;
+    margin-top: 100px; /* Add margin to avoid collision with header */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+/* Container */
+.container {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* Input field for URL */
+input[type="text"] {
+    width: 80%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Buttons */
+button {
+    background-color: #001E6C;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #FFAA4C;
+}
+
+.hidden {
+    display: none;
+}
+
+/* QR Code Section */
+#qr-code-container {
+    margin-top: 10px;
+}
+
+#qr-code img {
+    max-width: 200px; /* Ensures the QR code doesn't overflow */
+    max-height: 150px; /* Keeps QR code from becoming too large */
+    margin-bottom: 10px;
+}
+
+/* Result Container */
+#result-container {
+    margin-top: 3px;
+}
+
+/* Reset Button */
+#reset-btn {
+    background-color: #FFAA4C;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#reset-btn:hover {
+    background-color: #e69538;
+}
+
+
+.container {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+}
+
+h1 {
+    color: #001E6C;
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+input[type="text"] {
+    width: 80%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    background-color: #001E6C;
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #FFAA4C;
+}
+
+.hidden {
+    display: none;
+}
+
+#qr-code-container img {
+    max-width: 100%;
+    margin-top: 20px;
+}
+
+#result-container {
+    margin-top: 30px;
+}
