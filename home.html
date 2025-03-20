@@ -8,9 +8,10 @@
     <script src="https://kit.fontawesome.com/a529d2affe.js" crossorigin="anonymous"></script>
 </head>
 <body>
+
+    <!-- Header -->
     <header>
-        <div class="logo">BYTEKIT</div> 
-        
+        <div class="logo">BYTEKIT</div>
         <div class="user-info">
             <i class="fas fa-user"></i>
             <span id="user-email">Loading...</span>
@@ -20,30 +21,33 @@
         </div>
     </header>
 
+    <!-- Hero Section -->
     <main>
-        <h1>Welcome to BYTEKIT</h1>
+        <h1>Powerful Tools at Your Fingertips</h1>
+        <p class="sub-text">Simplify your workflow with our easy-to-use utilities</p>
 
         <div class="tool-options">
             <div class="tool-card" onclick="redirectTo('url.html')">
                 <i class="fas fa-link"></i>
                 <h3>URL Shortener</h3>
-                <p>Shorten & Track Your Links</p>
+                <p>Shorten Your Links</p>
             </div>
 
             <div class="tool-card" onclick="redirectTo('qr.html')">
                 <i class="fas fa-qrcode"></i>
                 <h3>QR Code Generator</h3>
-                <p>Create Custom QR Codes</p>
+                <p>Create QR Codes</p>
             </div>
 
             <div class="tool-card" onclick="redirectTo('notes.html')">
-                <i class="fas fa-sticky-note"></i>
-                <h3>AI Notes</h3>
-                <p>Summarize & Organize Notes</p>
+                <i class="fas fa-chart-line"></i>
+                <h3>Analytics</h3>
+                <p>View Your Dashboard</p>
             </div>
         </div>
-
     </main>
+
+  
 
     <script type="module" src="js/home.js"></script>
 </body>

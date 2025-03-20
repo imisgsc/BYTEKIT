@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>QR Code Generator</title>
     <link rel="stylesheet" href="css/qr.css">
+    <script src="https://kit.fontawesome.com/a529d2affe.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.qrcode/1.0/jquery.qrcode.min.js"></script>
 </head>
@@ -21,24 +23,25 @@
             </button>
         </div>
     </header>
+
     <main>
-        <div class="container">
+        <div class="card">
             <h1>QR Code Generator</h1>
-            <input type="text" id="url-input" placeholder="Enter URL to generate QR Code" />
-            <button id="generate-btn">Generate QR Code</button>
-            
+            <input type="text" id="url-input" placeholder="Enter URL to generate QR Code">
+            <button id="generate-btn"><i class="fa-solid fa-qrcode"></i> Generate QR</button>
+
             <div id="qr-code-container" class="hidden">
                 <div id="qr-code"></div>
-                <button id="copy-btn">Copy QR Code</button>
+                <button id="copy-btn"><i class="fa-solid fa-copy"></i> Copy QR</button>
             </div>
-            
+
             <div id="result-container" class="hidden">
                 <p id="qr-text"></p>
-                <button id="reset-btn">Reset</button>
+                <button id="reset-btn"><i class="fa-solid fa-undo"></i> Reset</button>
             </div>
         </div>
     </main>
 
-    <script type="module" src="js/qr.js">    </script>
+    <script type="module" src="js/qr.js"></script>
 </body>
 </html>

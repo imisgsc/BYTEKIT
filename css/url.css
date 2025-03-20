@@ -33,22 +33,14 @@ header {
     letter-spacing: 1.5px;
 }
 
-/* User Controls (Top Right) */
+/* User Controls */
 .user-controls {
     display: flex;
     align-items: center;
     gap: 15px;
 }
 
-/* User ID */
-#user-id {
-    font-size: 14px;
-    font-weight: 500;
-    color: white;
-}
-
-/* Home & Logout Buttons */
-.home-btn, .logout-btn {
+.user-controls button {
     background: #FFAA4C;
     color: white;
     border: none;
@@ -61,53 +53,57 @@ header {
     gap: 5px;
 }
 
-.home-btn:hover, .logout-btn:hover {
+.user-controls button:hover {
     background: #e69538;
 }
 
 /* Main Content */
 main {
     text-align: center;
-    margin-top: 30px;
+    margin-top: 50px;
 }
 
 /* URL Shortener Box */
 .shortener-container {
     text-align: center;
     background-color: white;
-    border-radius: 10px;
-    padding: 20px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
     width: 100%;
     max-width: 500px;
+    transition: 0.3s ease-in-out;
 }
 
 .shortener-container h1 {
     color: #001E6C;
+    font-size: 26px;
     margin-bottom: 20px;
-    font-size: 24px;
 }
 
 /* Input Field */
+.input-container {
+    display: flex;
+    gap: 10px;
+}
+
 .shortener-container input {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 20px;
-    border: 1px solid #ddd;
+    flex: 1;
+    padding: 12px;
+    border: 2px solid #ddd;
     border-radius: 5px;
     font-size: 16px;
 }
 
-/* Buttons */
 .shortener-container button {
     background-color: #035397;
     color: white;
-    padding: 10px 20px;
+    padding: 12px 18px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     font-size: 16px;
-    margin: 10px;
+    transition: 0.2s ease;
 }
 
 .shortener-container button:hover {
@@ -115,17 +111,44 @@ main {
 }
 
 /* Result Display */
-#result-container p {
-    font-size: 1.1rem;
-    margin-top: 15px;
-    font-weight:bold;
+#result-container {
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 8px;
+    background: #f5f5f5;
     color: #001E6C;
+    font-size: 1rem;
 }
 
+#result-container span {
+    font-weight: bold;
+    color: #035397;
+}
+
+.btn-group {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.btn-group button {
+    background-color: #035397;
+    padding: 10px 14px;
+    font-size: 14px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.btn-group button:hover {
+    background-color: #FFAA4C;
+}
+
+/* Expiry Message */
 #expiry-message {
     font-size: 0.9rem;
     color: #FFAA4C;
     margin-top: 10px;
 }
-
-

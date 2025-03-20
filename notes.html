@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ByteKit - URL Shortener</title>
+    <link rel="stylesheet" href="css/notes.css">
+    <script src="https://kit.fontawesome.com/a529d2affe.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+    <script type="module" src="firebase/firebase.js"></script>
+</head>
+<body>
+    <header>
+        <div class="logo">BYTEKIT</div>
+        <div class="user-controls">
+            <span id="user-id"></span>
+            <button class="home-btn" onclick="window.location.href='home.html';">
+                <i class="fa-solid fa-house"></i> Home
+            </button>
+            <button class="logout-btn" onclick="logout();">
+                <i class="fa-solid fa-sign-out-alt"></i> Logout
+            </button>
+        </div>
+    </header>
+
+       
+    <script type="module" src="js/notes.js"></script>
+</body>
+</html>

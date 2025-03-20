@@ -6,8 +6,6 @@
     <title>ByteKit - URL Shortener</title>
     <link rel="stylesheet" href="css/url.css">
     <script src="https://kit.fontawesome.com/a529d2affe.js" crossorigin="anonymous"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
     <script type="module" src="firebase/firebase.js"></script>
 </head>
@@ -27,14 +25,17 @@
     <main>
         <div class="shortener-container">
             <h1>URL Shortener</h1>
-            <input type="text" id="original-url" placeholder="Enter your long URL here">
-            <button id="generate-btn">Generate Short URL</button>
-
+            <div class="input-container">
+                <input type="text" id="original-url" placeholder="Enter your long URL here">
+                <button id="generate-btn"><i class="fa-solid fa-link"></i> Shorten</button>
+            </div>
             <div id="result-container" style="display: none;">
                 <p>Shortened URL: <span id="shortened-url"></span></p>
-                <button id="copy-btn">Copy URL</button>
-                <button id="reset-btn">Reset</button>
-                <button id="regenerate-btn">Regenerate</button>
+                <div class="btn-group">
+                    <button id="copy-btn"><i class="fa-solid fa-copy"></i> Copy</button>
+                    <button id="regenerate-btn"><i class="fa-solid fa-sync-alt"></i> Regenerate</button>
+                    <button id="reset-btn"><i class="fa-solid fa-trash-alt"></i> Reset</button>
+                </div>
                 <p id="expiry-message">Link expires in <span id="timer">10:00</span> minutes</p>
             </div>
         </div>
