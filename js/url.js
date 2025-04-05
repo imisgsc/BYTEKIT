@@ -73,11 +73,13 @@ async function copyToClipboard() {
         querySnapshot.forEach(async (docSnap) => {
             const docRef = doc(db, "url", docSnap.id);
             await updateDoc(docRef, {
-                clickCount: increment(1)
+                clickCount: increment(1),
+                lastCopiedAt: new Date() // Add timestamp here
             });
         });
     });
 }
+
 
 document.getElementById('generate-btn').addEventListener('click', generateShortURL);
 document.getElementById('copy-btn').addEventListener('click', copyToClipboard);

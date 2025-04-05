@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ByteKit - URL Shortener</title>
+    <title>ByteKit - Analytics Dashboard</title>
     <link rel="stylesheet" href="css/analytics.css">
     <script src="https://kit.fontawesome.com/a529d2affe.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -25,7 +25,48 @@
         </div>
     </header>
 
-       
+    <main class="dashboard">
+        <!-- Top Metrics -->
+        <section class="stats-section">
+            <div class="stat-card" id="total-urls">Total URLs<br><span>0</span></div>
+            <div class="stat-card" id="total-clicks">Total Clicks<br><span>0</span></div>
+            <div class="stat-card" id="avg-clicks">Avg Clicks/URL<br><span>0</span></div>
+            <div class="stat-card" id="top-url">Top URL<br><span>-</span></div>
+            <div class="stat-card" id="recent-url">Recent URL<br><span>-</span></div>
+        </section>
+    
+       <!-- Charts Section -->
+<section class="charts">
+    <div class="chart-card">
+        <h3>Clicks Per Date</h3>
+        <canvas id="clicksOverTimeChart"></canvas>
+    </div>
+</section>
+
+
+    
+        <!-- Recent URLs Table -->
+        <section class="table-section">
+            <h3>Recent URLs</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Original URL</th>
+                        <th>Short URL</th>
+                        <th>Clicks</th>
+                        <th>Timestamp</th>
+                    </tr>
+                </thead>
+                <tbody id="recent-urls-body">
+                    <!-- Dynamic Rows -->
+                </tbody>
+            </table>
+        </section>
+    </main>
+    
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+         
     <script type="module" src="js/analytics.js"></script>
 </body>
 </html>
