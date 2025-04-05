@@ -1,47 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BYTEKIT - Login / Signup</title>
-    <link rel="stylesheet" href="css/auth.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>BYTEKIT - Login / Signup</title>
+  <link rel="stylesheet" href="css/auth.css" />
 </head>
 <body>
-    <div class="container">
-        <!-- Left Side: Logo & Introduction -->
-        <div class="intro">
-            <h1>Welcome to <span>BYTEKIT</span></h1>
-            <p>Effortlessly Manage, Share, and Organize Your Links & Notes!</p>
-            <ul>
-                <li>Shorten URLs for easy sharing with built-in analytics.</li>
-                <li>Generate QR Codes for quick access across devices.</li>
-                <li>Summarize & Attach Notes to links using AI-powered tools.</li>
-            </ul>
-            <p class="cta">Simplify your workflow and enhance productivity today!</p>
-        </div>
-
-        <!-- Right Side: Login / Signup Slider -->
-        <div class="auth-container">
-            <div class="slider">
-                <div id="login-card" class="card active">
-                    <h2>Login</h2>
-                    <input type="email" id="login-email" placeholder="Email">
-                    <input type="password" id="login-password" placeholder="Password">
-                    <button onclick="login()">Login</button>
-                    <p>Don't have an account? <span class="toggle" onclick="toggleAuth()">Sign Up</span></p>
-                </div>
-
-                <div id="signup-card" class="card">
-                    <h2>Sign Up</h2>
-                    <input type="email" id="signup-email" placeholder="Email">
-                    <input type="password" id="signup-password" placeholder="Password">
-                    <button onclick="signup()">Sign Up</button>
-                    <p>Already have an account? <span class="toggle" onclick="toggleAuth()">Login</span></p>
-                </div>
-            </div>
-        </div>
+  <div class="container">
+    <!-- Left Side -->
+    <div class="intro">
+      <h1>Welcome to <span>BYTEKIT</span></h1>
+      <p>Effortlessly Manage, Share, and Organize Your Links!</p>
+      <ul>
+        <li>Shorten URLs for easy sharing with built-in analytics.</li>
+        <li>Generate QR Codes for quick access across devices.</li>
+        <li>Track link performance powered by intelligent insights.</li>
+      </ul>
+      <p class="cta">Simplify your workflow and enhance productivity today!</p>
     </div>
 
-    <script src="js/auth.js" type="module"></script>
+    <!-- Right Side: Login / Signup Slider -->
+    <div class="auth-container">
+      <div class="slider">
+        <div id="login-card" class="card">
+          <h2>Login</h2>
+          <input type="email" id="login-email" placeholder="Email" />
+          <input type="password" id="login-password" placeholder="Password" />
+          <button onclick="login()">Login</button>
+          <p>Don't have an account? <span class="toggle" onclick="toggleAuth()">Sign Up</span></p>
+        </div>
+
+        <div id="signup-card" class="card">
+          <h2>Sign Up</h2>
+          <input type="email" id="signup-email" placeholder="Email" />
+          <input type="password" id="signup-password" placeholder="Password" />
+          <button onclick="signup()">Sign Up</button>
+          <p>Already have an account? <span class="toggle" onclick="toggleAuth()">Login</span></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="js/auth.js"></script>
 </body>
 </html>

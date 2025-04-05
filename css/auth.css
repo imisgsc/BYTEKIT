@@ -9,10 +9,10 @@ body {
     align-items: center;
     justify-content: center;
     height: 100vh;
-}
-
-/* Container */
-.container {
+  }
+  
+  /* Container */
+  .container {
     display: flex;
     width: 70%;
     max-width: 900px;
@@ -20,10 +20,10 @@ body {
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
-}
-
-/* Left Section (Intro) */
-.intro {
+  }
+  
+  /* Left Section (Intro) */
+  .intro {
     flex: 1;
     background: linear-gradient(135deg, #001E6C, #035397);
     color: white;
@@ -32,81 +32,79 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-}
-
-/* BYTEKIT Title */
-.intro h1 {
+  }
+  
+  .intro h1 {
     font-size: 32px;
     font-weight: bold;
     margin-bottom: 10px;
     text-transform: uppercase;
-}
-
-.intro span {
+  }
+  
+  .intro span {
     color: #FFAA4C;
-}
-
-/* Description */
-.intro p {
+  }
+  
+  .intro p {
     font-size: 15px;
     margin-bottom: 15px;
     line-height: 1.5;
-}
-
-/* Features List */
-.intro ul {
+  }
+  
+  .intro ul {
     list-style: none;
     padding: 0;
     text-align: left;
-}
-
-.intro li {
+  }
+  
+  .intro li {
     font-size: 14px;
     padding-left: 20px;
     margin-bottom: 8px;
     position: relative;
-}
-
-.intro li::before {
+  }
+  
+  .intro li::before {
     content: "✔";
     color: #FFAA4C;
     font-weight: bold;
     position: absolute;
     left: 0;
-}
-
-/* CTA Text */
-.cta {
+  }
+  
+  .cta {
     font-weight: bold;
     font-size: 16px;
     color: #FFAA4C;
     margin-top: 15px;
-}
-
-/* Right Section (Auth Container) */
-.auth-container {
+  }
+  
+  /* Auth Container */
+  .auth-container {
     flex: 1;
-    padding: 40px;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  /* Slider Section */
+  .slider {
     display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-/* Auth Cards */
-.card {
-    width: 100%;
-    max-width: 300px;
-    text-align: center;
-    display: none;
+    width: 200%;
+    transition: transform 0.5s ease-in-out;
+    height: 100%;
+  }
+  
+  /* Each Card */
+  .card {
+    width: 50%;
+    padding: 40px;
+    box-sizing: border-box;
     color: #001E6C;
-}
-
-.card.active {
-    display: block;
-}
-
-/* Form Inputs */
-input {
+    text-align: center;
+  }
+  
+  /* Inputs */
+  input {
     width: 100%;
     padding: 10px;
     margin: 10px 0;
@@ -114,16 +112,16 @@ input {
     border-radius: 5px;
     font-size: 16px;
     transition: 0.3s;
-}
-
-input:focus {
+  }
+  
+  input:focus {
     border-color: #035397;
     box-shadow: 0px 0px 5px rgba(3, 83, 151, 0.5);
     outline: none;
-}
-
-/* Buttons */
-button {
+  }
+  
+  /* Buttons */
+  button {
     width: 100%;
     padding: 12px;
     background-color: #035397;
@@ -133,36 +131,38 @@ button {
     cursor: pointer;
     font-size: 16px;
     transition: background 0.3s;
-}
-
-button:hover {
+  }
+  
+  button:hover {
     background-color: #FFAA4C;
-}
-
-/* Toggle Between Login & Signup */
-.toggle {
+  }
+  
+  .toggle {
     color: #035397;
     cursor: pointer;
     font-weight: bold;
     transition: color 0.3s;
-}
-
-.toggle:hover {
+  }
+  
+  .toggle:hover {
     color: #FFAA4C;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
     .container {
-        flex-direction: column;
-        width: 90%;
+      flex-direction: column;
+      width: 90%;
     }
-
-    .intro {
-        padding: 20px;
+  
+    .slider {
+      flex-direction: column;
+      width: 100%;
+      transform: translateY(0); /* Optional: If switching vertically on mobile */
     }
-
-    .auth-container {
-        padding: 30px;
+  
+    .card {
+      width: 100%;
     }
-}
+  }
+  
