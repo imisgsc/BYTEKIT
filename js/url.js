@@ -1,5 +1,7 @@
 import { db } from "./firebase.js";
-import { collection, addDoc, doc, deleteDoc, query, where, getDocs } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-firestore.js";
+import { 
+    collection, addDoc, doc, deleteDoc, query, where, getDocs, updateDoc, increment 
+} from "https://www.gstatic.com/firebasejs/9.22.2/firebase-firestore.js";
 
 async function generateShortURL() {
     const originalUrl = document.getElementById('original-url').value;
@@ -15,7 +17,8 @@ async function generateShortURL() {
         await addDoc(collection(db, "url"), {
             originalUrl: originalUrl,
             shortUrl: shortUrl,
-            expiryTime: expiryTime
+            expiryTime: expiryTime,
+            clickCount: 0 // Initialize click count
         });
 
         document.getElementById('shortened-url').textContent = `https://bytekit.com/${shortUrl}`;
@@ -37,10 +40,10 @@ async function deleteExpiredLink(shortUrl) {
 }
 
 function startCountdown(expiryTime, shortUrl) {
-    let timeLeft = Math.floor((expiryTime - Date.now()) / 1000); // Calculate the remaining time in seconds
+    let timeLeft = Math.floor((expiryTime - Date.now()) / 1000); // Remaining time in seconds
     const countdownInterval = setInterval(async () => {
         const now = Date.now();
-        timeLeft = Math.max(Math.floor((expiryTime - now) / 1000), 0); // Update remaining time
+        timeLeft = Math.max(Math.floor((expiryTime - now) / 1000), 0);
 
         const minutes = Math.floor(timeLeft / 60);
         const seconds = timeLeft % 60;
@@ -55,10 +58,24 @@ function startCountdown(expiryTime, shortUrl) {
     }, 1000);
 }
 
-function copyToClipboard() {
+async function copyToClipboard() {
     const textToCopy = document.getElementById('shortened-url').textContent;
-    navigator.clipboard.writeText(textToCopy).then(() => {
+    navigator.clipboard.writeText(textToCopy).then(async () => {
         alert('Shortened URL copied to clipboard');
+
+        // Extract short code
+        const shortCode = textToCopy.split('/').pop();
+
+        // Find matching doc in Firestore
+        const q = query(collection(db, "url"), where("shortUrl", "==", shortCode));
+        const querySnapshot = await getDocs(q);
+
+        querySnapshot.forEach(async (docSnap) => {
+            const docRef = doc(db, "url", docSnap.id);
+            await updateDoc(docRef, {
+                clickCount: increment(1)
+            });
+        });
     });
 }
 
